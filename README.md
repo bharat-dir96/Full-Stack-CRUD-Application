@@ -26,6 +26,7 @@ Steps to setup and run the project successfully:
     http://127.0.0.1:5000/
 
     1. User Authentication
+       
         1.1 Register a New User
         - Endpoint: /register
         - method: POST
@@ -74,6 +75,7 @@ Steps to setup and run the project successfully:
             "error": "Username or password are not matched! or Email Verification is not done. Please try again."
           }
     2. Post Management
+       
        2.1 Fetch All Posts
          - Endpoint: /event-page
          - method: POST
@@ -86,29 +88,30 @@ Steps to setup and run the project successfully:
                  "created_at": "2025-03-19 20:26:07.973093"
                  "updated_at": "2025-03-19 20:26:07.973093"
              }
-           
+   
        2.2 Create a New Post
-           - Endpoint: /create-post
-           - method: POST
-           - Request Body (JSON):
+         - Endpoint: /create-post
+         - method: POST
+         - Request Body (JSON):
             {
               "title": "My Second Post",
               "content": "This is an amazing post about APIs!"
             }
-            Response (Success - 201 Created):
+         - Response (Success - 201 Created):
             {
               "message": "Post is created successfully."
             }
+   
           
        2.3 Update a Post
-           - Endpoint: /update-post/{id}
-           - method: PUT
-           - Request Body (JSON):
+         - Endpoint: /update-post/{id}
+         - method: PUT
+         - Request Body (JSON):
             {
               "title": "Updated Title",
               "content": "Updated content...."
             }
-            Response (Success - 201 Created):
+         - Response (Success - 201 Created):
             {
               "message": "Post Updated Successfully."
             }
@@ -124,15 +127,15 @@ Steps to setup and run the project successfully:
     3. Error Handling
        If something goes wrong, the API will return an error response like this:
 
-      - Status Code: 400 Bad Request
-        Response (Example):
-        {
-          "error": "Username Already exists."
-        }
+          - Status Code: 400 Bad Request
+          Response (Example):
+          {
+            "error": "Username Already exists."
+          }
         
-  4. Authentication & Security
-      - Users must register and verify their email before logging in.
-      - Authenticated users get a JWT token for authorization.
+    4. Authentication & Security
+        - Users must register and verify their email before logging in.
+        - Authenticated users get a JWT token for authorization.
 
   
 
