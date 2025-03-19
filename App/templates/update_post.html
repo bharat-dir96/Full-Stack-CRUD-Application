@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}
+    Update Post
+{% endblock %}
+
+{%block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-update-post" style="color:black">
+            {{ form.hidden_tag() }}
+            <br><br>
+            <h1>
+                Update your Post
+            </h1>
+            <br>
+            {{ form.title.label() }}
+            {{ form.title(class="form-control", placeholder="Write atleast 10 characters", value=post.post_title) }}
+
+            {% for error in form.title.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+
+            {{ form.description.label() }}
+            <textarea name="{{ form.description.name }}" class="form-control" rows="10" placeholder="Write at least 30 characters">{{ post.post_description }}</textarea>
+            
+            {% for error in form.description.errors %}
+                <div class="alert alert-danger">{{ error }}</div>
+            {% endfor %}
+
+            <br>
+
+            <button type="submit" class="btn btn-lg btn-primary">Update Post</button>
+            <br><br>
+            <a href="{{ url_for('event_page') }}" class="btn btn-lg btn-secondary">Cancel</a>
+
+            <br><br>
+        </form>
+    </div>
+</body>
+
+{%endblock %}
