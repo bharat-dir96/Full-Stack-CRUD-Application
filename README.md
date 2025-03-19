@@ -11,7 +11,7 @@ Steps to setup and run the project successfully:
 - Then Head over to the repo folder
 
 - Now, First Install the requirements file with this command -                pip install -r requirements.txt
-- Now run this command python -                                               python run.py
+- Now run this command -                                                      python run.py
 
   This will run this application into your browser and you can interact with it efficiently.
   You can do the following operations -
