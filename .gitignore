@@ -1,0 +1,24 @@
+# Python cache and compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+myenv/
+
+# Environment variables
+.env
+
+# Database (optional, if using SQLite and don’t want to track it)
+*.sqlite3
+*.db
+instance/
+
+# Vercel or deployment-specific configs (optional)
+.vercel/
+
+# VSCode and OS-specific files
+.vscode/
+.DS_Store
